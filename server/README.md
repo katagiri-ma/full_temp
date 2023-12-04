@@ -68,3 +68,15 @@ npm create vite@latest client
 npm i
 npm run dev
 ```
+
+1. ビルド！
+
+```js
+npm run build
+```
+
+・うまくいかなかったら、build した dist ディレクトリをコピペすれば soloporo と一緒
+
+.env ファイルは build 時に取り込まれるので、切り替えには使えない
+・自動でやりたいなら　 ①index.js static の path 　
+②![Alt text](image.png)

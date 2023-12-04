@@ -17,13 +17,14 @@ app.use(
 );
 
 // サーバーが立ち上がった状態でフロントを立ち上げる
+// ポートを一個にする場合　path調べてみ　static path.join
 app.use("/", express.static("./dist"));
 
 // // ファイルを分けたい時
 // app.use("/api/task", taskRoute);
 
 // // 動作確認
-app.get("/", (req, res) => {
+app.get("/data", (req, res) => {
   res.send("Hello express");
 });
 

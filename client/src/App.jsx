@@ -8,6 +8,8 @@ function App() {
 
   const handleSubmit = async () => {
     const response = await fetch("http://localhost:3000").then((res) => {
+      // 一個にする場合
+      // const response = await fetch("/data").then((res) => {
       return res.text();
     });
     console.log("res", response);
