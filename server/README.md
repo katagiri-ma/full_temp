@@ -45,3 +45,26 @@ npx knex init
 ```js
 npm run makeMigration create_task_table
 ```
+
+1. マイグレーションファイル実行　 seed 作成＆実行
+
+```js
+npm run migrate
+npm run makeSeed
+npm run seed
+```
+
+###client
+
+1. vite で react 環境構築
+
+```js
+npm create vite@latest client
+```
+
+1. インストール
+
+```js
+npm i
+npm run dev
+```

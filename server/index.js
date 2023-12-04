@@ -10,11 +10,11 @@ require("dotenv").config();
 
 const PORT = process.env.PORT || 3000;
 
-// app.use(
-//   cors({
-//     origin: 'http://localhost:5173',
-//   })
-// );
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
 
 // サーバーが立ち上がった状態でフロントを立ち上げる
 app.use("/", express.static("./dist"));
