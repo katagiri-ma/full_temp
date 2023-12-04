@@ -1,30 +1,30 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const cors = require('cors');
+const cors = require("cors");
 
 // bodyがgetできる
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
-require('dotenv').config();
+require("dotenv").config();
 
 const PORT = process.env.PORT || 3000;
 
-app.use(
-  cors({
-    origin: 'http://localhost:5173',
-  })
-);
+// app.use(
+//   cors({
+//     origin: 'http://localhost:5173',
+//   })
+// );
 
 // サーバーが立ち上がった状態でフロントを立ち上げる
-app.use('/', express.static('./dist'));
+app.use("/", express.static("./dist"));
 
 // // ファイルを分けたい時
 // app.use("/api/task", taskRoute);
 
 // // 動作確認
-app.get('/', (req, res) => {
-  res.send('Hello express');
+app.get("/", (req, res) => {
+  res.send("Hello express");
 });
 
 app.listen(PORT, () => {
